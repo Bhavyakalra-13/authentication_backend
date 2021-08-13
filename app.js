@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const authenticationroutes = require("./routes/auth.js");
-var cors = require('cors')
+const cors = require('cors')
 
 // endpoints to test
 // http://localhost:8080/signup
 // http://localhost:8080/signin
 
-app.use(cors())
+app.use(cors({origin: '*'})),
 
 // db connection
 mongoose
