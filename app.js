@@ -30,7 +30,7 @@ app.use(express.json());
 // My Routes
 app.use(authenticationroutes);
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // starting a server
 app.listen(port, () => {
